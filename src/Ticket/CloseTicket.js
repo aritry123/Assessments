@@ -19,7 +19,7 @@ class CloseTicket extends React.Component {
                             <h3 className="card-text"><b></b>{item.description}</h3>
                             <p className="card-title">{item.timeStamp}</p>
                             <p className="card-text"><b>Ticket ID: </b>{item.id}</p>
-                            <p className="card-text"><b></b>{item.summary}</p>
+                            <p className="card-text"><b>Summary: </b>{item.summary}</p>
                         </div>
                     </div>
                 </div>

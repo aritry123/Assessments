@@ -21,6 +21,7 @@ class Ticket extends React.Component {
         this.setState({result:temp})
     }
     addSummary=(sum,itemid)=>{
+        if(sum==='') return alert("Please fill the summary!")
         let temp=[...this.state.result]
         let obj=temp.find((item)=>item.id===itemid)
         obj.summary=sum
@@ -32,7 +33,7 @@ class Ticket extends React.Component {
         <div>
           <div>
             <h2 style={{textAlign: 'center',color: 'green'}}>Opened Tickets</h2>
-            <OpenTicket data={this.getOpenedTickets()} handleStatusChange={this.handleStatusChange} addSummary={this.addSummary}></OpenTicket>
+            <OpenTicket data={this.getOpenedTickets()} addSummary={this.addSummary}></OpenTicket>
           </div>
           <div className="row">
             <h2 style={{textAlign: 'center',color: 'red'}}>Closed Tickets</h2>
