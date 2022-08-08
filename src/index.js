@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import Complete from './others';
+import Footer from './others/Footer';
+import StateOne from './State/StateOne'
+import { UserDetailsTwo } from './UserDetailsTwo';
+import StateTwo from './State/StateTwo'
+import RootComponent from './State/RootComponent';
+import ContactManager from './ContactManager/ContactManager';
+import LifeCycleMethods from './LifeCycleMethods/LifeCycleMethods';
+import PageContent from './ClassComponents/PageContent'
+// import PageContentTwo from './ClassComponents/PageContentTwo';
+import { UserDetails } from './UserDetails';
+import PureCompoEg from './LifeCycleMethods/PureCompoEg';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(
+<>
+{/* <h1 style={{textAlign: "center"}}>Welcome to React JS!</h1>
+<Complete></Complete> */}
+{/* <PageContent data={UserDetails}></PageContent> */}
+{/* <PageContentTwo data={UserDetails}></PageContentTwo> */}
+{/* <Footer></Footer> */}
+{/* <StateOne data={UserDetailsTwo}></StateOne> */}
+{/* <StateTwo></StateTwo> */}
+{/* <RootComponent></RootComponent> */}
+{/* <ContactManager></ContactManager> */}
+{/* <LifeCycleMethods></LifeCycleMethods> */}
+{/* <LifeCycleMethods initialMsg="initial value"></LifeCycleMethods> */}
+{/* <PureCompoEg></PureCompoEg> */}
+<App></App>
+</>
+);
