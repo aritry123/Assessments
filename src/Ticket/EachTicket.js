@@ -4,17 +4,17 @@ class EachTicket extends React.Component {
     constructor(props) {
         super(props)
         this.state={
-            result:this.props.data,
-            flag:-1,
-            input:''
+            // result:this.props.data,
+            // flag:-1,
+            // input:''
         }
     }
-    handleChange=(itemid)=>{
-        this.setState({flag:itemid})
-    }
-    handleInput=(e)=>{
-        this.setState({input:e.target.value})
-    }
+    // handleChange=(itemid)=>{
+    //     this.setState({flag:itemid})
+    // }
+    // handleInput=(e)=>{
+    //     this.setState({input:e.target.value})
+    // }
     render() {
         const {data, addSummary, handleChange, handleInput, flag, input}=this.props
       return (
