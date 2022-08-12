@@ -8,3 +8,6 @@
     transform: scale(1.08);
     color: black;
 }
+.li {
+    cursor: pointer;
+}
