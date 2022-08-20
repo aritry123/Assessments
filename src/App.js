@@ -10,8 +10,8 @@ import CRUDOps from './APICalls/CRUDOps'
 import data from './TaskManager/TaskManagerData'
 import TaskManager from './TaskManager/TaskManager'
 import React from "react";
-// import {BrowserRouter,Route,Routes,Link, NavLink} from 'react-router-dom'
-import { BrowserRouter, Switch ,Route,NavLink} from "react-router-dom";
+import {BrowserRouter,Route,Routes,Link, NavLink} from 'react-router-dom'
+// import { BrowserRouter, Switch ,Route,NavLink} from "react-router-dom";
 import LeaderBoard from './ScoreDashBoard/LeaderBoard'
 import JustSort from './ScoreDashBoard/JustSort'
 import ImageSearch from './APICalls/ImageSearch'
@@ -25,7 +25,11 @@ import ticketData from './Ticket/TicketData'
 // import Dashboard from './NestedRoutes/Dashboard'
 import './App.css'
 import PageNotFound from './NestedRoutes/PageNotFound'
-import { DashBoard, HomePage, Login } from './V5Components/VFiveComponents'
+import SampleRefComponent from './RefExamples/SampleRefComponent'
+import CreatingRefWithCBFunc from './RefExamples/CreatingRefWithCBFunc'
+import StylingWithRef from './RefExamples/StylingWithRef'
+import ParentForm from './RefExamples/ParentForm'
+// import { DashBoard, HomePage, Login } from './V5Components/VFiveComponents'
 function App() {
     return(
         <div>
@@ -50,7 +54,7 @@ function App() {
 
             {/* <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<LeaderBoard></LeaderBoard>}></Route>
+                    <Route path='/' element={<JustSort userkey='lead' value={0}></JustSort>}></Route>
                     <Route path='/name'element={<JustSort userkey='name' value={1}></JustSort>}></Route>
                     <Route path='/age' element={<JustSort userkey='age' value={2}></JustSort>}></Route>
                     <Route path='/rank' element={<JustSort userkey='rank' value={3}></JustSort>}></Route>
@@ -58,7 +62,7 @@ function App() {
                 </Routes>
             </BrowserRouter> */}
 
-            <Ticket data={ticketData}></Ticket>
+            {/* <Ticket data={ticketData}></Ticket> */}
 
             {/* <BrowserRouter>
                 <Routes>
@@ -105,6 +109,13 @@ function App() {
                     <Route path='/login'><Login></Login></Route>
                 </Switch>
             </BrowserRouter> */}
+
+            {/* <SampleRefComponent></SampleRefComponent> */}
+            {/* <CreatingRefWithCBFunc></CreatingRefWithCBFunc> */}
+            {/* <StylingWithRef></StylingWithRef> */}
+            {/* <ParentForm></ParentForm> */}
+
+            
         </div>
     )
 }

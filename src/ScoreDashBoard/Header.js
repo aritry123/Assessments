@@ -11,6 +11,9 @@ class Header extends React.Component{
         }
     }
     componentDidMount(){
+        if(this.props.value===0) {
+            this.setState({fname:false,age:false,rank:false,score:false})
+        }
         if(this.props.value===1){
             this.setState({fname:true,age:false,rank:false,score:false})
         }
@@ -26,6 +29,9 @@ class Header extends React.Component{
     }
     componentDidUpdate(prevProps) {
         if(prevProps.value!==this.props.value) {
+            if(this.props.value===0) {
+                this.setState({fname:false,age:false,rank:false,score:false})
+            }
             if(this.props.value===1){
                 this.setState({fname:true,age:false,rank:false,score:false})
             }
@@ -45,13 +51,13 @@ class Header extends React.Component{
         console.log("inside header")
         return(
             <div>
+                {
+                    this.props.value>0 ? <Link to='/'><button className="btn btn-outline-success" style={{margin: '5px'}}>Leaderboard</button></Link> : <Link to='/'><button className="btn btn-success" style={{margin: '5px'}}>Leaderboard</button></Link>
+                }
                 <Link to='/rank'><button className={rank?'btn btn-success':'btn btn-outline-success'} style={{margin: '5px'}}>Rank</button></Link>
                 <Link to='/name'><button className={fname?'btn btn-success':'btn btn-outline-success'} style={{margin: '5px'}}>Name</button></Link>
                 <Link to='/age'><button className={age?'btn btn-success':'btn btn-outline-success'} style={{margin: '5px'}}>Age</button></Link>
                 <Link to='/score'><button className={score?'btn btn-success':'btn btn-outline-success'} style={{margin: '5px'}}>Score</button></Link>
-                {
-                    this.props.value>0 ? <Link to='/'><button className="btn btn-outline-success" style={{margin: '5px'}}>Leaderboard</button></Link> : <></>
-                }
             </div>
         )
     }

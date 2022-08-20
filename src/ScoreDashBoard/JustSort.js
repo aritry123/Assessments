@@ -17,6 +17,9 @@ class JustSort extends React.Component{
         // this.setState({data:sorteddata})
         // }
         console.log("inside did mount")
+        if(this.props.value===0) {
+            this.setState({data:Response.list})
+        }
         if(this.props.value===2) {
             // const sorteddata=[...Response.list].sort((a,b)=>Number(a.age)-Number(b.age))
             this.setState({data:[...Response.list].sort((a,b)=>Number(a.age)-Number(b.age))})
@@ -36,6 +39,9 @@ class JustSort extends React.Component{
         }
         componentDidUpdate(prevProps) {
             if(prevProps.value!==this.props.value) {
+                if(this.props.value===0) {
+                    this.setState({data:Response.list})
+                }
                 if(this.props.value===2) {
                     this.setState({data:[...Response.list].sort((a,b)=>Number(a.age)-Number(b.age))})
                 }
@@ -55,7 +61,7 @@ class JustSort extends React.Component{
         return(
             <div className='bgColor'>
                 <Header value={this.props.value}></Header>
-                <h2 style={{textAlign: 'center'}}>Sorted based on {this.props.userkey} </h2>
+                {this.props.value>0 ? <h2 style={{textAlign: 'center'}}>Sorted based on {this.props.userkey} </h2> : <h2 style={{textAlign: 'center'}}>Leaderboard</h2>}
                 <TableData tabledata={this.state.data}></TableData>
             </div>
         )
